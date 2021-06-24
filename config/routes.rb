@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :users
       resources :ratings
 
-      post 'authenticate', to 'authentication#create'
+      post '/login', to: 'authentication#login'
     end
   end
 end

@@ -1,6 +1,18 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
+  # check the token sent to us by the client
+  # returns the user object that the token represents
+  def profile
+    token = request.headers["Authentication"].split(" ")[1]
+    payload = decode(token)
+    user_id = payload["user_id"]
+    @user = User.find(user_id)
+    render json: {
+      user: UserSerializer.new(@user) }, 
+    status: :accepted
+  end
+
   # GET /users
   def index
     @users = User.all

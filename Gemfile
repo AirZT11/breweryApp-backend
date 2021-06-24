@@ -23,6 +23,10 @@ gem 'active_model_serializers'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'jwt'
+
+# use figaro to store evnironment variables
+gem 'figaro'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
