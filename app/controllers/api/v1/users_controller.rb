@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
 
   # check the token sent to us by the client
   # returns the user object that the token represents
-  def current_user
+  def profile
     token = request.headers["Authentication"].split(" ")[1]
     payload = decode_token(token)
     user_id = payload["user_id"]
