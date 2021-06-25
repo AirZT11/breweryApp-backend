@@ -3,14 +3,17 @@ class Api::V1::UsersController < ApplicationController
 
   # check the token sent to us by the client
   # returns the user object that the token represents
-  def profile
+  def current_user
     token = request.headers["Authentication"].split(" ")[1]
-    payload = decode(token)
+    payload = decode_token(token)
     user_id = payload["user_id"]
     @user = User.find(user_id)
-    render json: {
-      user: UserSerializer.new(@user) }, 
-    status: :accepted
+    if @user
+      render json: {
+        user: UserSerializer.new(@user) }, status: :accepted
+    else
+      render json: { error: "User not found"}, status: :unprocessable_entity
+    end
   end
 
   # GET /users

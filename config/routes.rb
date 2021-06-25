@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :ratings
 
       post '/login', to: 'authentication#login'
+      get '/current_user', to: 'users#current_user'
+      
     end
   end
 end
