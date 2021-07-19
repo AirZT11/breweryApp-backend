@@ -1,6 +1,6 @@
 class Api::V1::RatingsController < ApplicationController
   before_action :set_rating, only: [:show, :update, :destroy]
-  before_action :authenticate_user, only: [:create, :update, :destroy]
+  # before_action :authenticate_user, only: [:create, :update, :destroy]
 
   # GET /ratings
   def index
@@ -8,6 +8,12 @@ class Api::V1::RatingsController < ApplicationController
 
     render json: @ratings
   end
+
+  # part of SOLUTION 1 to fetching ratings
+  # GET /brewery_ratings
+  # def brewery_ratings
+  #   @brewery_id = 
+  # end
 
   # GET /ratings/1
   def show
@@ -19,7 +25,7 @@ class Api::V1::RatingsController < ApplicationController
     @rating = Rating.new(rating_params)
 
     if @rating.save
-      render json: @rating, status: :created, location: @rating
+      render json: { rating: RatingSerializer.new(@rating)}, status: :created
     else
       render json: @rating.errors, status: :unprocessable_entity
     end
@@ -47,6 +53,6 @@ class Api::V1::RatingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def rating_params
-      params.require(:rating).permit(:rating)
+      params.permit(:rating, :user_id, :brewery_id, :brewery_name, :review)
     end
 end

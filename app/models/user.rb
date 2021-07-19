@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   # include Rails.application.routes.url_helpers
   has_secure_password
-
   has_many :ratings
+  
   validates :name, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :email, presence: true

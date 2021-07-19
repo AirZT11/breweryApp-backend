@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
       post '/login', to: 'authentication#login'
       get '/profile', to: 'users#profile'
-
+      # part of SOLUTION 1 to fetching ratings - get '/brewery_ratings', to: 'ratings#brewery_ratings'
+      
     end
   end
 end
