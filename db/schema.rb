@@ -10,33 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_07_022857) do
+ActiveRecord::Schema.define(version: 2021_10_07_043015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "breweries", force: :cascade do |t|
-    t.string "brewery_type"
-    t.string "city"
-    t.string "country"
-    t.string "latitude"
-    t.string "longitude"
-    t.string "name"
-    t.string "phone"
-    t.string "postal_code"
-    t.string "state"
-    t.string "street"
-    t.string "website_url"
+    t.text "brewery_type"
+    t.text "city"
+    t.text "country"
+    t.integer "latitude"
+    t.integer "longitude"
+    t.text "name"
+    t.text "phone"
+    t.text "postal_code"
+    t.text "state"
+    t.text "street"
+    t.text "website_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "brewery_id"
+    t.string "brewery_id"
   end
 
   create_table "ratings", force: :cascade do |t|
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "brewery_id"
+    t.string "brewery_id"
     t.text "brewery_name"
     t.integer "user_id"
     t.text "review"
