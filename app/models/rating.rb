@@ -6,4 +6,6 @@ class Rating < ApplicationRecord
   #   where("brewery_id = ?", brewery_id)
   # end
 
+  # fetch individual brewery ratings
+
 end
