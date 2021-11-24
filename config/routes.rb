@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
       post '/login', to: 'authentication#login'
       get '/profile', to: 'users#profile'
-      # part of SOLUTION 1 to fetching ratings - get '/brewery_ratings', to: 'ratings#brewery_ratings'
+      get '/brewery_ratings', to: 'ratings#brewery_ratings'
+      get '/user_ratings', to: 'ratings#user_ratings'
+      # get '/average_rating', to: 'ratings'
+
+      # get '/search', to: 'breweries#search_breweries'
       
     end
   end
