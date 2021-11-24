@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # host for Heroku domain
+  Rails.application.routes.default_url_options[:host] ='https://brewery-finder-api.herokuapp.com/'
+
+  SECRET = ENV['SECRET_KEY_BASE'] || Rails.application.secrets.secret_key_base
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

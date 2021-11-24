@@ -54,4 +54,5 @@ test:
   timeout: 5000
 
 production:
+  <<: *default
   database: <%= ENV["DATABASE_URL"] %>
