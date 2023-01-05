@@ -1,0 +1,18 @@
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230105-46755-67w0hs sitelibdir\=./.gem.20230105-46755-67w0hs clean
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230105-46755-67w0hs sitelibdir\=./.gem.20230105-46755-67w0hs
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230105-46755-67w0hs sitelibdir\=./.gem.20230105-46755-67w0hs install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230105-46755-67w0hs/racc
