@@ -1,0 +1,16 @@
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/3.0.3/lib/ruby/3.0.0 -r ./siteconf20230105-37681-pdfwb8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/admin/Documents/Coding/breweryApp-backend/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230105-37681-7r1xmr/bootsnap
